@@ -43,5 +43,3 @@ for i in range(2**N):
     else:
         ans += 1
 print(ans)
-
-# ちょっとむずかしい。。bit全探索を他の問題でもやってみる。
