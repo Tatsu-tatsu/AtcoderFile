@@ -1,8 +1,12 @@
+# このように定数にするだけでもわかりやすさが増す。
+N, M = 3,3
+
 # 以下模範解答
 import itertools
 
 N, M = map(int, input().split())
 
+# 配列の初期化
 graph = [[0]*N for _ in range(N)]
 
 for i in range(M):
@@ -13,6 +17,7 @@ for i in range(M):
     graph[b][a] = 1
 
 ans = 0
+# N=3のとき、(0,1,2),(1,0,2)...と全通りrange(N)を入れることで取れる。 
 for num in itertools.permutations(range(N)):
     if num[0] == 0:
         count = 0
