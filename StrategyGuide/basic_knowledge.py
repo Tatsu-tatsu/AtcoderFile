@@ -3,6 +3,15 @@ S = input()
 s = list(S)
 s.extend(('', '')) # s.extend()は戻り値がNone。2行で書く。
 
+# 文字列を2倍にする
+s = "ABC"
+s = s * 2
+print(s) # 'ABCABC'
+
+# 文字列からの検索
+if "BCA" in s: # s = "ABCABC"。, 中にあるときは戻り値がtrue
+  print("Yes")
+
 # 配列の初期化
 l = [0] * 3 # [0, 0, 0]
 
