@@ -44,3 +44,6 @@ for _ in range(Q):
   A[fi], A[si] = A[si], A[fi]
   idx[x] = si
   idx[y] = fi
+  
+print(*A[1:])
+
