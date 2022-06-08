@@ -15,6 +15,11 @@ if "BCA" in s: # s = "ABCABC"。, 中にあるときは戻り値がtrue
 # 配列の初期化
 l = [0] * 3 # [0, 0, 0]
 
+# 配列の結合
+l2 = [1, 2, 3]
+# joinで配列の結合。mapですべてをstrにする。
+word = "".join(map(str, l2)) ## 123
+
 lst = [24, 16]
 # リストの要素を取得
 for elem in lst:
