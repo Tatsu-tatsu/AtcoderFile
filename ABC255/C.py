@@ -63,3 +63,42 @@ for i in range(N):
       print(X-p)
     elif X -p > q - X:
       print(q-X)
+
+# 以下模範解答
+# 二分探索を使う。
+# 等差数列の反転。マイナスはやりにくいので、D>=0になるように正規化する。
+# 公差に-1をかける。項数は一緒。元々の最後の項を初項とする。
+
+X, A, D, N = map(int, input().split())
+def S(i):
+  return A+(i-1)*D
+
+if D<0:
+  A = S(N)
+  D = D*-1
+
+def search(X):
+  # (1)区間[左,右]を指定する。
+  l=0
+  r=N
+  # (4)1<(左-右)となっている間繰り返す。
+  while 1 < r-l:
+    # (2)中央値が条件を満たすか。
+    # (3)右or左を更新する。
+    c=(l+r)//2
+    if S(c) <= X:
+      l=c
+    else:
+      r=c
+  return l,r
+
+if D==0:
+  print(abs(A-X))
+elif 0< D:
+  if X<A:
+    print(A-X)
+  elif S(N)<=X:
+    print(X-S(N))
+  else:
+    l,r = search(X)
+    print(min(X-S(l), S(r)-X))
