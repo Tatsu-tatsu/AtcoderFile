@@ -8,3 +8,10 @@ a2 = np.dot(a, a)
 import sys
 texts = sys.stdin.read()
 
+# 数字の桁数の処理
+N = 2543
+n = str(N)
+# 配列にする。
+n_array = list(map(int, n))
+if "3" in n:
+  print("3があるよ")
