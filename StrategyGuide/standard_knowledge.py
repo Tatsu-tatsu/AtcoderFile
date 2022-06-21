@@ -15,3 +15,9 @@ n = str(N)
 n_array = list(map(int, n))
 if "3" in n:
   print("3があるよ")
+
+# 二次元配列以上のsort
+data = [['きゅうり',1,4],['いちご',2,6],['にんじん',2,1],['とうふ',1,0]]
+# 昇順でソートする
+sorted_data = sorted(data, key=lambda x:(x[1], x[2]))
+print(sorted_data) #data = [['とうふ',1,0],['きゅうり',1,4],['にんじん',2,1],['いちご',2,6]]
