@@ -42,7 +42,6 @@ def dfs(v):
         if not seen[next_v]:
             dfs(next_v)
  
- 
 n, m = map(int, input().split())
 e = [[] for i in range(n + 1)]
 seen = [False] * (n + 1)
