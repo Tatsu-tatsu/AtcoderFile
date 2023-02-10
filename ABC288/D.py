@@ -8,3 +8,5 @@ for i in range(Q):
   for j in range(1, r):
     num = items[j-1] - items[j]
 
+
+# 考察：拡大係数行列を用いた解法
